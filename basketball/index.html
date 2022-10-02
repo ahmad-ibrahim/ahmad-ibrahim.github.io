@@ -1,0 +1,86 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sportive Pal - Fantasy Hoops Newsletter</title>
+    <style>
+      html {
+        background-color: #edddd4;
+        font-family: monospace;
+        text-align: center;
+        color: #140f2d;
+        font-size: 18px;
+      }
+
+      #container {
+        width: 80vw;
+        margin: 0 auto;
+      }
+
+      .title {
+        margin-top: 20vh;
+        margin-bottom: 20px;
+        font-size: 55px;
+        font-weight: 700;
+        color: #197278;
+      }
+
+      .subtitle {
+        font-weight: 500;
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+
+      input,
+      button {
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 30px;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        outline: none;
+      }
+
+      input,
+      input:focus {
+        border: 1px solid #197278;
+        color: #197278;
+      }
+
+      button {
+        border: none;
+        background-color: #197278;
+        color: #edddd4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="title">Fantasy Basketball Newsletter</div>
+      <div class="subtitle">
+        Get fantasy insights, predictions and odds right to your inbox
+        completely free.
+      </div>
+      <form>
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe!</button>
+      </form>
+
+      <div style="display: none" id="thanks">
+        You subscribed successfully. Enjoy!
+      </div>
+    </div>
+
+    <script>
+      const form = document.querySelector("form");
+      const thanks = document.querySelector("#thanks");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        form.style.display = "none";
+        thanks.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
